@@ -1,32 +1,26 @@
-# 个人在线笔记
-<div align='center'><img src='./client/public/icon.svg'></div>
+<div style="display: flex; justify-content: center; align-items: center">
+    <a href="https://cn.vuejs.org/"><img src="./Demo/vue.svg" width="50px"></a>
+    <a href="https://robyn.tech/"><img src="./Demo/robyn.png" style="margin: 0 8px 0 20px;"></a>
+    <a href="https://www.wangeditor.com/" style="margin: 0 8px 0 20px;"><img src="./Demo/wangEditor.png" width="50px"></a>
+    <a href="https://min.io/open-source/download"><img src="./Demo/minio.svg" width="50px" style="margin: 0 0 0 0;"></a>
+    <a href="https://www.mysql.com/"><img src="./Demo/Mysql.svg" width="50px" style="margin: 0 8px 0 20px;"></a>
+</div>
 
-### 描述
-> 简单粗暴的搭建个人在线笔记, 接入 Gitee 用户认证
-<br>
-功能比较简单, 只有 查看、编辑、删除
-<br>
-富文本编辑器用的是 [AiEditor](https://aieditor.dev/zh/config/base.html)
-<br>
-不支持表情保存？ 可能是我获取及保存的方式有点不对
+### 简介
+本项目是一个简单的本地博客系统，前端使用Vue.js，后端使用 Robyn，数据库使用 MySQL，存储使用 MinIO，编辑器使用 wangEditor5， 虽然页面不是很好看，但是够用，哈哈哈
 
-### 环境搭建
-> Python >=3.6
-<br>
-Node.js >= 18
-<br>
-Mysql
+### 功能
+- 用户注册、登录
+- 文章发布、编辑、删除、预览、搜索
 
-| server | client |
-|--------|--------|
-|· 先修改 config.json 中的配置信息|· 先修改 src/utils/axios/index.ts 的 baseURL 为 本地 ip:server port
-|· client_id 和 client_secret 在 [gitee](https://gitee.com/oauth/applications) 创建一个应用后可拿到|· npm install
-|· pip install -r requirements|· npm run dev # 开发环境
-|· python manage.py makemigrations|· npm run build
-|· python manage.py migrate|· node server.js
-|· python manage.py runserver 0.0.0.0|
+### 部署
+    > docker-compose up -d
+
+    > 访问 http://localhost:9000 创建一个名为 blog 的 bucket, 并将该 bucket 的 Access Policy 设置为 public
+    
+    > 访问 http://localhost:5173 开启笔记之旅
 
 ### Demo
-| 首页 | 编辑/修改 | 查看 |
-|:--------:|:--------:|:--------:|
-|<img src="./demo/demo_index.jpg">|<img src="./demo/demo_create.jpg">|<img src="./demo/demo_show.jpg">
+|                     首页                 |                     编辑                  |                     预览                 |
+|:---------------------------------------- |:-----------------------------------------|:-----------------------------------------|
+|<img src="./Demo/index.jpg" width="200px">|<img src="./Demo/edit.jpg" width="200px">|<img src="./Demo/preview.jpg" width="200px">|

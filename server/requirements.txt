@@ -1,6 +1,7 @@
-django==3.*
-mysqlclient
+-U
+python-jose[cryptography]
+robyn
+loguru
 pymysql
-requests
-easydict
-django-cors-headers
+passlib
+sqlmodel

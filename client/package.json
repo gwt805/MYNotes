@@ -2,33 +2,35 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@tresjs/core": "^3.9.0",
-    "@types/node": "^20.12.7",
-    "@types/three": "^0.164.0",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "aieditor": "^1.0.0",
-    "ant-design-vue": "^4.2.1",
-    "axios": "^1.6.8",
-    "compression": "^1.7.4",
-    "element-plus": "^2.7.2",
-    "express": "^4.19.2",
-    "ip": "^2.0.1",
-    "less": "^4.2.0",
-    "three": "^0.164.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "vue-router": "^4.3.2",
-    "vue-tsc": "^2.0.6"
+    "@plugin-web-update-notification/vite": "^1.7.1",
+    "@types/node": "^22.5.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "@wangeditor/plugin-formula": "^1.0.11",
+    "@wangeditor/plugin-link-card": "^1.0.0",
+    "@wangeditor/plugin-md": "^1.0.0",
+    "@wangeditor/plugin-upload-attachment": "^1.1.0",
+    "axios": "^1.7.9",
+    "element-plus": "^2.9.1",
+    "katex": "^0.16.18",
+    "less": "^4.2.1",
+    "typescript": "~5.6.2",
+    "uuid": "^11.0.3",
+    "vite": "^6.0.5",
+    "vite-plugin-require-transform": "^1.0.21",
+    "vue-router": "^4.5.0",
+    "vue-tsc": "^2.2.0"
   }
 }

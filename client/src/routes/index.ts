@@ -1,54 +1,55 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
-import empty from "@/components/empty/empty.vue";
-import login from "@/components/auth/login.vue"
-import article_create from "@/components/article/create.vue"
-import article_show from "@/components/article/show.vue"
-import article_index from "@/components/index.vue"
-import article_desc from "@/components/article/decription.vue"
-import article_update from "@/components/article/update.vue"
+import { type RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
+import auth from '@/components/auth.vue'
+import index from '@/components/index.vue'
+import edsh from '@/components/blog/edsh.vue'
+import empy from '@/components/empty.vue'
+import create from '@/components/blog/creat.vue'
+// import { public_elmsg_warning } from '@/utils/elmsg/index';
 
 const routes: RouteRecordRaw[] = [
-  {
-    path: "/",
-    redirect: "/login",
-  },
-  {
-    path: "/login",
-    name: "login",
-    component: login
-  },
-  {
-    path: "/index",
-    component: article_index,
-    children: [
-      {
-        path: "",
-        name: "index",
-        component: article_show
-      },
-	  {
-		  path: "article/:id",
-		  name: "article_show",
-		  component: article_desc
-	  },
-      {
-        path: "article/create",
-        name: "article-create",
-        component: article_create
-      },
-	  {
-		  path: "article/update/:id",
-		  name: "article_update",
-		  component: article_update
-	  }
-    ]
-  },
-  { path: "/:pathMatch(.*)*", name: "NotFound", component: empty },
+    {
+        path: '/',
+        redirect: '/login'
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: auth
+    },
+    {
+        path: '/index',
+        name: 'index',
+        component: index,
+    },
+    {
+        path: '/page/create',
+        name: 'blog-create',
+        component: create
+    },
+    {
+        path: '/page/:type/:id',
+        name: 'page-update-show',
+        component: edsh
+    },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: empy },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+    history: createWebHistory(),
+    routes,
 });
+
+// router.beforeEach((to, from, next) => {
+//     const userRole = window.localStorage.getItem('is_superuser');
+//     if (to.meta.roles) {
+//         if (to.meta.roles == userRole) { next(); }
+//         else {
+//             public_elmsg_warning('您没有权限访问该页面 !');
+//             // next({name: 'index'});
+//             location.href = '/index';
+//         }
+//     }
+//     else { next(); }
+// });
 
 export default router;
