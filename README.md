@@ -1,6 +1,6 @@
-<div style="display: flex; justify-content: center; align-items: center">
+<div align="center">
     <a href="https://cn.vuejs.org/"><img src="./Demo/vue.svg" width="50px"></a>
-    <a href="https://robyn.tech/"><img src="./Demo/robyn.png" style="margin: 0 8px 0 20px;"></a>
+    <a href="https://robyn.tech/"><img src="./Demo/robyn.png" style="margin: 0 20px 0 20px;"></a>
     <a href="https://www.wangeditor.com/" style="margin: 0 8px 0 20px;"><img src="./Demo/wangEditor.png" width="50px"></a>
     <a href="https://min.io/open-source/download"><img src="./Demo/minio.svg" width="50px" style="margin: 0 0 0 0;"></a>
     <a href="https://www.mysql.com/"><img src="./Demo/Mysql.svg" width="50px" style="margin: 0 8px 0 20px;"></a>
