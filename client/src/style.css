@@ -8,7 +8,7 @@ body {
 }
 
 html.dark {
-  --w-e-textarea-bg-color: #6e6d6d;
+  --w-e-textarea-bg-color: transparent;
   --w-e-textarea-color: #fff;
   --w-e-textarea-border-color: #fff;
   --w-e-textarea-slight-border-color: #333;

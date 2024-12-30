@@ -14,7 +14,7 @@ async def login(request: Request) -> LoginResponse:
     flag,msg,md = await db_login(req['username'], req['password'])
     token = await create_access_token({"username": req['username']})
     if flag:
-        data = {'id': md.id, 'username': md.username, 'avatar': md.avatar, 'isadmin': md.isadmin, 'created_at': md.created_at.strftime("%Y-%m-%d %H:%M:%S"), 'updated_at': md.updated_at.strftime("%Y-%m-%d %H:%M:%S"), 'token': token}
+        data = {'id': md.id, 'username': md.username, 'avatar': md.avatar, 'created_at': md.created_at.strftime("%Y-%m-%d %H:%M:%S"), 'updated_at': md.updated_at.strftime("%Y-%m-%d %H:%M:%S"), 'token': token}
         return {'code': 0, 'status': 'success', 'msg': msg, 'data': data}
     else: return {'code': -1, 'status': 'error', 'msg': msg, 'data': {}}
 

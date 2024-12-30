@@ -12,6 +12,7 @@
 </template>
 
 <script setup lang="ts">
+import "@/assets/js/spidercanvas.js";
 import { createblog } from "@/api/blog";
 import "@wangeditor/editor/dist/css/style.css";
 import { userinfo } from '@/utils/session/index'
@@ -181,7 +182,7 @@ window.addEventListener('resize', () => {
 .content {
     width: calc(100% - 1px);
     height: 100%;
-    background-color: #6e6d6d;
+    background-color: transparent;
     .title {
         height: 35px;
         display: flex;
@@ -191,7 +192,7 @@ window.addEventListener('resize', () => {
             width: 100%;
             height: 35px;
             border: none;
-            background-color: #6e6d6d;
+            background-color: transparent !important;
             border-right: 1px solid #ccc;
             font-size: large;
         }

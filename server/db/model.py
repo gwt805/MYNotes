@@ -15,7 +15,7 @@ class User(SQLModel, table=True):
     updated_at: str = Field(default=datetime.now(), sa_type=DATETIME(), nullable=False)
 
     def __repr__(self):
-        return f"<User(id={self.id}, username={self.username}, password={self.password}), avatar={self.avatar}, isadmin={self.isadmin}, created_at={self.created_at.strftime("%Y-%d-%m %H:%M:%S")}, updated_at={self.updated_at.strftime("%Y-%d-%m %H:%M:%S")}>"
+        return f"<User(id={self.id}, username={self.username}, password={self.password}), avatar={self.avatar}, created_at={self.created_at.strftime("%Y-%d-%m %H:%M:%S")}, updated_at={self.updated_at.strftime("%Y-%d-%m %H:%M:%S")}>"
 
 class Blog(SQLModel, table=True):
     id: Optional[int] = Field(default=None, sa_type=BigInteger(), primary_key=True, index=True)

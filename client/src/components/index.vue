@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="pagenum">
-            <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :background="false" layout="total, prev, pager, next, jumper" :total="count" @size-change="handleSizeChange" @current-change="handleCurrentChange"/>
+            <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :background="false" layout="total, prev, pager, next, jumper" hide-on-single-page :total="count" @size-change="handleSizeChange" @current-change="handleCurrentChange"/>
         </div>
         <el-drawer v-model="ismodel" size="100vw">
             <h2>个人信息</h2>
@@ -50,6 +50,7 @@
 </template>
 
 <script setup lang="ts">
+import "@/assets/js/spidercanvas.js";
 import { updateuserimg } from '@/api/auth';
 import { ElMessageBox } from 'element-plus';
 import { ref, type Ref, nextTick } from 'vue';

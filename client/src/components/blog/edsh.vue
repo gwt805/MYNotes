@@ -14,6 +14,7 @@
 </template>
 
 <script setup lang="ts">
+import "@/assets/js/spidercanvas.js";
 import { get_blog_single, updateblog } from "@/api/blog";
 import { useRoute, useRouter} from "vue-router";
 import "@wangeditor/editor/dist/css/style.css";
@@ -215,7 +216,7 @@ window.addEventListener('resize', () => {
 .content {
     width: calc(100% - 1px);
     height: 100%;
-    background-color: #6e6d6d;
+    background-color: transparent;
     .title {
         height: 35px;
         display: flex;
@@ -225,14 +226,14 @@ window.addEventListener('resize', () => {
             width: 100%;
             height: 35px;
             border: none;
-            background-color: #6e6d6d;
+            background-color: transparent;
             border-right: 1px solid #ccc;
             font-size: larger;
             text-indent: 1em;
             line-height: 34px;
         }
         .el-input {
-        background-color: #6e6d6d !important;
+        background-color: transparent !important;
         }
         
         .el-button {
@@ -240,7 +241,7 @@ window.addEventListener('resize', () => {
         }
     }
     .title::v-deep .el-input {
-        background-color: #6e6d6d !important;
+        background-color: transparent !important;
     }
     .div-editor {
         height: calc(100% - 35px);
